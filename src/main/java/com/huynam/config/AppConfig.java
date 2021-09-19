@@ -42,7 +42,7 @@ import java.util.Properties;
 @Configuration
 @EnableTransactionManagement
 @ComponentScan("com.huynam.controller")
-//@EnableJpaRepositories
+
 public class AppConfig  implements WebMvcConfigurer, ApplicationContextAware {
     private ApplicationContext applicationContext;
     @Override

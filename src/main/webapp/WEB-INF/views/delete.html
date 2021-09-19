@@ -7,7 +7,7 @@
 </head>
 <body>
 <h1>Bạn muốn xóa Employee?</h1>
-<form action="/delete/customer" method="post" th:object="${deleteForm}">
+<form action="/delete/Employee" method="post" th:object="${deleteForm}">
     <input type="text" name="id" th:value="*{id}" hidden>
     <h1 th:utext="${deleteForm.name}"></h1>
     <button type="submit">Delete</button>
