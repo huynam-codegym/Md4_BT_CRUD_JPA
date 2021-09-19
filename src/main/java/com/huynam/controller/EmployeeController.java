@@ -62,7 +62,7 @@ public class EmployeeController {
     }
     @PostMapping("/delete/Employee")
     public String deleteEmployee(@ModelAttribute("deleteForm") Employee employee){
-        System.out.println("customer ID"+employee.getId());
+        System.out.println("employee ID"+employee.getId());
       employeeService.delete(employee.getId());
         return "redirect:/";
     }

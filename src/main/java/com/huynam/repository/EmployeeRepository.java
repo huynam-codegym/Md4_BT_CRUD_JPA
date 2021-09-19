@@ -14,8 +14,6 @@ public class EmployeeRepository implements IEmployeeRepository{
     EntityManager entityManager;
     @Override
     public List<Employee> findAll() {
-        //Nên viết ngược List gọi class trước để lấy câu truy vấn
-
         String queryStr = "select  c from Employee as c";
         List<Employee> employeeList = entityManager.createQuery(queryStr, Employee.class ).getResultList();
 
