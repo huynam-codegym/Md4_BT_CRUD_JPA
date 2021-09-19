@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>List employee</title>
+</head>
+<style>
+    table{
+        width: 100%;
+    }
+    .hn {
+        text-align: center;
+    }
+</style>
+<body>
+<a href="/create">Create Customer</a><br><br>
+<table border="1" class="hn">
+    <tr>
+        <td>STT</td>
+        <td>Name</td>
+        <td>Address</td>
+        <td>Edit</td>
+        <td>Detail</td>
+        <td>Delete</td>
+    </tr>
+    <tr th:each="employee:${listEmployee}">
+        <td th:utext="${employee.id}"></td>
+        <td th:utext="${employee.name}"></td>
+        <td th:utext="${employee.address}"></td>
+        <td><a th:href="@{/edit/{id}(id=${employee.getId()})}">Edit</a> </td>
+        <td><a th:href="@{/detail/{id}(id=${employee.getId()})}">Detail</a> </td>
+        <td><a th:href="@{/delete/{id}(id=${employee.getId()})}">Delete</a> </td>
+    </tr>
+</table>
+
+</body>
+</html>
